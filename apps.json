@@ -1,0 +1,61 @@
+{
+  "name": "YouMod",
+  "identifier": "com.snrahulyt.youmod",
+  "apiVersion": "v2",
+  "subtitle": "Automated YouMod IPA builds",
+  "description": "AltStore/Feather/SideStore/LiveContainer source for YouMod. No ads, background playback, downloads, SponsorBlock, PiP, and more.",
+  "iconURL": "https://raw.githubusercontent.com/jaydenjcpy/YouMod/master/Icon.png",
+  "website": "https://github.com/jaydenjcpy/YouMod",
+  "sourceURL": "https://raw.githubusercontent.com/SNRahulYT/Youtube-Sidestore/main/apps.json",
+  "apps": [
+    {
+      "name": "YouMod",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "Tonwalter888",
+      "subtitle": "YouMod",
+      "category": "photo-video",
+      "version": "21.35.3",
+      "versionDate": "2026-08-30",
+      "versionDescription": "YouTube 21.35.3 | YouMod_21.35.3_v2.0\n\nUpdated YT version.\n\n> [!WARNING]\n> 21.34.3+ builds require iOS 17+.",
+      "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa32/YouMod_21.35.3_v2.0.ipa",
+      "size": 129008054,
+      "localizedDescription": "YouMod mod. Includes no ads, background playback, downloads, iSponsorBlock, PiP, and more.",
+      "iconURL": "https://raw.githubusercontent.com/jaydenjcpy/YouMod/master/Icon.png",
+      "tintColor": "FF0000",
+      "screenshotURLs": [],
+      "versions": [
+        {
+          "version": "21.35.3",
+          "date": "2026-08-30",
+          "localizedDescription": "YouTube 21.35.3 | YouMod_21.35.3_v2.0\n\nUpdated YT version.\n\n> [!WARNING]\n> 21.34.3+ builds require iOS 17+.",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa32/YouMod_21.35.3_v2.0.ipa",
+          "size": 129008054,
+          "minOSVersion": "17.0"
+        },
+        {
+          "version": "21.34.3",
+          "date": "2026-08-25",
+          "localizedDescription": "Updated to YouTube 21.34.3.\n\n> [!WARNING]\n> 21.34.3+ builds require iOS 17+.",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa31/YouMod_21.34.3_v2.0.0.ipa",
+          "size": 128545201,
+          "minOSVersion": "17.0"
+        },
+        {
+          "version": "21.33.6",
+          "date": "2026-08-23",
+          "localizedDescription": "Updated to YouTube 21.33.6.",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa28/YouMod_21.33.6_v2.0.0.ipa",
+          "size": 122092084
+        },
+        {
+          "version": "21.25.5",
+          "date": "2026-06-24",
+          "localizedDescription": "Updated to YouTube 21.25.5.",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa-isponsorblock10/YouMod_21.25.5_v1.3.0.ipa",
+          "size": 122493007
+        }
+      ]
+    }
+  ],
+  "news": []
+}
