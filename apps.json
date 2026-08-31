@@ -16,7 +16,7 @@
       "category": "photo-video",
       "version": "21.35.3",
       "versionDate": "2026-08-30",
-      "versionDescription": "YouTube 21.35.3 | YouMod_21.35.3_v2.0\n\nUpdated YT version.\n\n> [!WARNING]\n> 21.34.3+ builds require iOS 17+.",
+      "versionDescription": "Updated YT ver\r\n\r\nFrom this version of YT, iOS 16 is no longer suppported ",
       "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa32/YouMod_21.35.3_v2.0.ipa",
       "size": 129008054,
       "localizedDescription": "YouMod mod. Includes no ads, background playback, downloads, iSponsorBlock, PiP, and more.",
@@ -27,7 +27,7 @@
         {
           "version": "21.35.3",
           "date": "2026-08-30",
-          "localizedDescription": "YouTube 21.35.3 | YouMod_21.35.3_v2.0\n\nUpdated YT version.\n\n> [!WARNING]\n> 21.34.3+ builds require iOS 17+.",
+          "localizedDescription": "Updated YT ver\r\n\r\nFrom this version of YT, iOS 16 is no longer suppported ",
           "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa32/YouMod_21.35.3_v2.0.ipa",
           "size": 129008054,
           "minOSVersion": "17.0"
@@ -35,7 +35,7 @@
         {
           "version": "21.34.3",
           "date": "2026-08-25",
-          "localizedDescription": "Updated to YouTube 21.34.3.\n\n> [!WARNING]\n> 21.34.3+ builds require iOS 17+.",
+          "localizedDescription": "Updated to YT v21.34.3",
           "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa31/YouMod_21.34.3_v2.0.0.ipa",
           "size": 128545201,
           "minOSVersion": "17.0"
@@ -43,16 +43,65 @@
         {
           "version": "21.33.6",
           "date": "2026-08-23",
-          "localizedDescription": "Updated to YouTube 21.33.6.",
+          "localizedDescription": "Updated to [YouMod 2.0](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\r\nUpdated to YT v21.33.6",
           "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa28/YouMod_21.33.6_v2.0.0.ipa",
           "size": 122092084
         },
         {
           "version": "21.25.5",
           "date": "2026-06-24",
-          "localizedDescription": "Updated to YouTube 21.25.5.",
+          "localizedDescription": "Updated to YT v21.25.55 with in theory, a playback fix\r\n\r\n[YTPlaybackFix repo](https://github.com/Mark02-2012/YTPlaybackFix)",
           "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa-isponsorblock10/YouMod_21.25.5_v1.3.0.ipa",
           "size": 122493007
+        },
+        {
+          "version": "21.24.3",
+          "date": "2026-06-15",
+          "localizedDescription": "Updated to YT v21.24.3",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa-isponsorblock8/YouMod_21.24.3_v1.3.0.ipa",
+          "size": 119970816
+        },
+        {
+          "version": "21.22.4",
+          "date": "2026-05-30",
+          "localizedDescription": "Updated to YT v21.22.4 \r\n**NOTE: IF YOU EXPERIENCE PLAYBACK ISSUES, YOU MUST LOG OUT IN ORDER TO CONTINUE USING THE MODS< AS NOT SOLUTION IS CURRENTLY FOUND**",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa-isponsorblock7/YouMod_21.22.4_v1.3.0.ipa",
+          "size": 118033148
+        },
+        {
+          "version": "21.20.4",
+          "date": "2026-05-18",
+          "localizedDescription": "Updated to YT v21.20.4",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa-isponsorblock6/YouMod_21.20.4_v1.3.0.ipa",
+          "size": 117552790
+        },
+        {
+          "version": "21.19.2",
+          "date": "2026-05-11",
+          "localizedDescription": "If having \"Something Went Wrong\" issues, pls refer to [this](https://pastebin.com/raw/XmY1hXSH)\r\n\r\n\r\nUpdated to YouTube v21.19.4\r\n\r\nYouMod by Tonwalter888\r\n\r\nTweaks:\r\n\r\niSponsorBlock\r\nA/B\r\nYTweaks\r\nVolumeBoostYT\r\nGonerino\r\nYouMod\r\nDontEatMyContent\r\nReturn YouTube Dislike\r\nYTUHD\r\nYouChooseQuality\r\nYouPiP\r\nYouSlider\r\nVideo Overlay\r\n\r\n*Restart after first launch to fix UI issues*",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa-isponsorblock5/YouMod_21.19.2_v1.3.0.ipa",
+          "size": 121852726
+        },
+        {
+          "version": "21.18.4",
+          "date": "2026-05-10",
+          "localizedDescription": "If having \"Something Went Wrong\" issues, pls refer to [this](https://pastebin.com/raw/XmY1hXSH)\r\n\r\n\r\nUpdated to YouMod 1.3.0\r\n\r\nYouMod by Tonwalter888\r\n\r\nTweaks:\r\n\r\niSponsorBlock\r\nA/B\r\nYTweaks\r\nVolumeBoostYT\r\nGonerino\r\nYouMod\r\nDontEatMyContent\r\nReturn YouTube Dislike\r\nYTUHD\r\nYouChooseQuality\r\nYouPiP\r\nYouSlider\r\nVideo Overlay\r\n\r\nYouMod 1.3.0 release notes:\r\n\r\nAdd downloading options (HUGE thanks to @daisuke1227 for implementing all of this)\r\nThat's it.\r\nSponsorBlock will be added in the next release (v1.4.0) with some other stuff.\r\n\r\n\r\n\r\n*Restart after first launch to fix UI issues*",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa-isponsorblock4/YouMod_21.18.4_v1.3.0.ipa",
+          "size": 124130518
+        },
+        {
+          "version": "21.17.3",
+          "date": "2026-05-03",
+          "localizedDescription": "If having \"Something Went Wrong\" issues, pls refer to [this](https://pastebin.com/raw/XmY1hXSH)\r\n\r\n\r\nUpdated to YouMod v1.2.3\r\n\r\nYouMod by Tonwalter888\r\n\r\nTweaks:\r\n\r\niSponsorBlock\r\nA/B\r\nYTweaks\r\nVolumeBoostYT\r\nGonerino\r\nYouMod\r\nDontEatMyContent\r\nReturn YouTube Dislike\r\nYTUHD\r\nYouChooseQuality\r\nYouPiP\r\nYouSlider\r\nVideo Overlay\r\n\r\n*Restart after first launch to fix UI issues*\r\n\r\nYouMod 1.2.3 Release Notes:\r\nAdds the hide Shorts shelf option back and Cleanup. \r\nAdds a option to replace next/previous buttons with forward/back buttons.\r\nAdds a option to disable hints.\r\nAdds a option to forcibly enables miniplayer (especially kid videos).\r\nAdds a option to always show seekbar in fullscreen mode.\r\nUpdate French translations ",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa8/YouMod_21.17.3_v1.2.3.ipa",
+          "size": 120616563
+        },
+        {
+          "version": "21.16.2",
+          "date": "2026-04-25",
+          "localizedDescription": "-Re-added SponsorBlock \r\n\r\nIf having \"Something Went Wrong\" issues, pls refer to [this](https://pastebin.com/XmY1hXSH)\r\n\r\nRestart after first launch on iPad to resolve UI issues",
+          "downloadURL": "https://github.com/jaydenjcpy/YouMod/releases/download/youmod-ipa3/YouMod_21.16.2_v1.0.0_iSponsorBlock_added.ipa",
+          "size": 122246261
         }
       ]
     }
