@@ -1,0 +1,227 @@
+name: Update YouMod JSON
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate apps.json from Jayden releases
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          import urllib.request
+          from pathlib import Path
+
+          URL = "https://api.github.com/repos/jaydenjcpy/YouMod/releases?per_page=100"
+
+          request = urllib.request.Request(
+              URL,
+              headers={
+                  "Accept": "application/vnd.github+json",
+                  "User-Agent": "SNRahulYT-YouMod-Source"
+              }
+          )
+
+          with urllib.request.urlopen(request) as response:
+              releases = json.load(response)
+
+          versions = []
+          seen_versions = set()
+
+          for release in releases:
+              if release.get("draft") or release.get("prerelease"):
+                  continue
+
+              ipa_assets = [
+                  asset
+                  for asset in release.get("assets", [])
+                  if asset.get("name", "").lower().endswith(".ipa")
+              ]
+
+              if not ipa_assets:
+                  continue
+
+              asset = ipa_assets[0]
+
+              text = (
+                  asset.get("name", "")
+                  + " "
+                  + release.get("name", "")
+              )
+
+              match = re.search(
+                  r"YouMod[_-](\d+\.\d+\.\d+)",
+                  text
+              )
+
+              if not match:
+                  continue
+
+              version = match.group(1)
+
+              if version in seen_versions:
+                  continue
+
+              seen_versions.add(version)
+
+              published = (
+                  release.get("published_at")
+                  or release.get("created_at")
+                  or ""
+              )
+
+              description = (
+                  release.get("body")
+                  or f"YouTube {version} | {asset['name']}"
+              )
+
+              item = {
+                  "version": version,
+                  "date": published[:10],
+                  "localizedDescription": description,
+                  "downloadURL": asset["browser_download_url"],
+                  "size": asset.get("size", 0)
+              }
+
+              # Jayden's releases from 21.34.3 onward require iOS 17.
+              version_parts = tuple(
+                  map(int, version.split("."))
+              )
+
+              if version_parts >= (21, 34, 3):
+                  item["minOSVersion"] = "17.0"
+
+              versions.append(
+                  (published, item)
+              )
+
+          # Newest release first
+          versions.sort(
+              key=lambda item: item[0],
+              reverse=True
+          )
+
+          version_items = [
+              item
+              for _, item in versions
+          ]
+
+          if not version_items:
+              raise SystemExit(
+                  "No published YouMod IPA releases found."
+              )
+
+          latest = version_items[0]
+
+          app = {
+              "name": "YouMod",
+              "bundleIdentifier": "com.google.ios.youtube",
+              "developerName": "Tonwalter888",
+              "subtitle": "YouMod",
+              "category": "photo-video",
+
+              "version": latest["version"],
+              "versionDate": latest["date"],
+              "versionDescription": latest["localizedDescription"],
+              "downloadURL": latest["downloadURL"],
+              "size": latest["size"],
+
+              "localizedDescription":
+                  "YouMod mod. Includes no ads, "
+                  "background playback, downloads, "
+                  "iSponsorBlock, PiP, and more.",
+
+              "iconURL":
+                  "https://raw.githubusercontent.com/"
+                  "jaydenjcpy/YouMod/master/Icon.png",
+
+              "tintColor": "FF0000",
+
+              "screenshotURLs": [],
+
+              "versions": version_items
+          }
+
+          source = {
+              "name": "YouMod",
+              "identifier": "com.snrahulyt.youmod",
+              "apiVersion": "v2",
+
+              "subtitle":
+                  "Automated YouMod IPA builds",
+
+              "description":
+                  "AltStore/Feather/SideStore/"
+                  "LiveContainer source for YouMod. "
+                  "No ads, background playback, "
+                  "downloads, SponsorBlock, PiP, "
+                  "and more.",
+
+              "iconURL":
+                  "https://raw.githubusercontent.com/"
+                  "jaydenjcpy/YouMod/master/Icon.png",
+
+              "website":
+                  "https://github.com/jaydenjcpy/YouMod",
+
+              "sourceURL":
+                  "https://raw.githubusercontent.com/"
+                  "SNRahulYT/Youtube-Sidestore/"
+                  "main/apps.json",
+
+              "apps": [app],
+
+              "news": []
+          }
+
+          Path("apps.json").write_text(
+              json.dumps(
+                  source,
+                  indent=2,
+                  ensure_ascii=False
+              ) + "\n",
+              encoding="utf-8"
+          )
+
+          print(
+              "Latest YouMod:",
+              latest["version"]
+          )
+
+          print(
+              "Total versions:",
+              len(version_items)
+          )
+
+          PY
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- apps.json; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add apps.json
+
+          git commit \
+            -m "Update YouMod source"
+
+          git push
